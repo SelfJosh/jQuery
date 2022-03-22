@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+    <body>
+        <form>
+            <a>Email:</a>
+            <input type="text" value="">
+            <a>Password:</a>
+            <input id="password" type="password" value="">
+        </form>
+    </body>
+    <script>
+        $(document).ready(function() {
+            $("html").append(
+                "<body>\
+                    <div id='container'>\
+                        <div id='inner'>\
+                            <h1>Basic jQuery</h1>\
+                            <p id='p1'>Paragraph 1</p>\
+                            <p id='p2'>Paragraph 2</p>\
+                            <p id='p3'>Paragraph 3</p>\
+                        </div>\
+                    </div>\
+                </body>"     
+            ) ;
+            $("#p2").css({color: "blue"});
+            $("#p3").css({cursor: "pointer"});
+            $("#p3").click(function () {
+                $("#p3").css({color: "red"});
+            });
+            $("h1").click(function () {
+                $('h1').hide();
+            }) ;
+            $("#password").css({color: "blue"});
+        }) 
+    </script>
+</html>
+
